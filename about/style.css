@@ -1,0 +1,29 @@
+.bg-pollution-industry {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(9, 42, 94, 0.8)), url("../imgs/pollution-industry.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about {
+    transition: 400ms ease-in-out;
+}
+
+.bg-cap {
+    background-image: url("../imgs/САР.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+}
+
+.bg-kaz {
+    background-image: url("../imgs/kazakhstan.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-six {
+    background-image: url("../imgs/6.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left top;
+}

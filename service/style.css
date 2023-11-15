@@ -1,0 +1,14 @@
+.bg-service {
+    background-image: url('../imgs/service_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#steps {
+    overflow-y: scroll;
+}
+
+.step-block {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}

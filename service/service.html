@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" >
+    <link rel="stylesheet" href="../style.css" >
+    <link rel="stylesheet" href="../index.css" >
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="bg-white w-full">
+        <div class="container-sm px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-cetner justify-between space-x-8">
+                    <img src="../imgs/logo.png" width="50" >
+                    <div class="hidden xl:flex items-center justify-between space-x-4">
+                        <a href="../index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Главная</a>
+                        <a href="../about/about.html" class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">О компании</a>
+                        <a class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Каталог</a>
+                        <a class="font-light text-gray-700 hover:border-1 hover:cursor-pointer border-b border-gray-700">Услуги</a>
+                        <a class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Референс</a>
+                        <a href="../survey-list/survey-list.html" class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Опросные</a>
+                        <a class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Контакты</a>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between space-x-4">
+                    <div class="hidden sm:flex flex-col space-y-2">
+                        <a class="font-light text-gray-700">+7 (7182) 64 44 37</a>
+                        <a class="font-light text-gray-700">+7 701 428 22 40</a>
+                    </div>
+                    <button class="bg-[#092A5E] rounded-xl px-4 py-3 text-white text-sm sm:px-6 sm:text-base font-medium">Обратный звонок</button>
+                    <button class="p-4"><img src="../imgs/menu.png" width="25"></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-service">
+        <div class="container-sm pt-36 pb-8">
+            <div class="flex flex-col justify-start">
+                <p class="text-white font-bold text-4xl uppercase">
+                    Услуги компании <br> “САР технология”
+                </p>
+                <p class="text-white font-medium text-lg mt-4 mb-20">
+                    Мы предлагаем различные услуги в зависимости <br> от их специализации и области деятельности
+                </p>
+                <img src="../imgs/arrow-down-circle.svg" width="60" >
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-100">
+        <div class="container-sm px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="relative flex flex-col space-y-8 p-8">
+                    <div class="absolute top-0 left-0 w-[400px] h-[150px] bg-blue-200"></div>
+                    <div class="flex items-center space-x-4 w-full z-10">
+                        <p class="text-base text-gray-700">СПИСОК</p>
+                        <div class="border-1 border-b border-gray-700 w-[200px]"></div>
+                    </div>
+                    <div class="z-10 ml-4 uppercase text-4xl font-medium max-w-[500px]">Наши решения тщательно разрабатываются командой экспертов в области инжинирии</div>
+                </div>
+                <div class="h-[700px] overflow-auto p-4">
+                    <ol class="border-l-2 border-blue-200">
+                        <li class="step-block mb-20">
+                            <div class="inline pt-2">
+                                <div class="w-[12px] h-[12px] rounded-full bg-[#092A5E] -ml-[7px]"></div>
+                                <div class="text-gray-700 text-lg ml-6 -mt-6">Подбор приборов давления, температуры, уровня, расхода, анализаторов газа и т.д. под конкретные условия технологических процессов Заказчика</div>
+                            </div>
+                        </li>
+                        <li class="step-block mb-20">
+                            <div class="inline pt-2">
+                                <div class="w-[12px] h-[12px] rounded-full bg-blue-500 -ml-[7px]"></div>
+                                <div class="text-gray-700 text-lg ml-6 -mt-6">Шеф-монтаж и пуско-наладочные работы поставляемого оборудования и приборов</div>
+                            </div>
+                        </li>
+                        <li class="step-block mb-20">
+                            <div class="inline pt-2">
+                                <div class="w-[12px] h-[12px] rounded-full bg-blue-300 -ml-[7px]"></div>
+                                <div class="text-gray-700 text-lg ml-6 -mt-6">Предоставление Заказчику паспортов, инструкций по монтажу, эксплуатации, сертификатов взрывобезопасного исполнения на поставляемые приборы и оборудование</div>
+                            </div>
+                        </li>
+                        <li class="step-block mb-20">
+                            <div class="inline pt-2">
+                                <div class="w-[12px] h-[12px] rounded-full bg-blue-200 -ml-[7px]"></div>
+                                <div class="text-gray-700 text-lg ml-6 -mt-6">Монтаж систем автоматизации и электромонтажные работы любой сложности</div>
+                            </div>
+                        </li>
+                        <li class="step-block mb-20">
+                            <div class="inline pt-2">
+                                <div class="w-[12px] h-[12px] rounded-full bg-blue-200 -ml-[7px]"></div>
+                                <div class="text-gray-700 text-lg ml-6 -mt-6">Разработка и предоставление Заказчику инструкций по эксплуатации, техническому обслуживанию, регламентов на введенные системы автоматизации технологических установок и электрооборудования</div>
+                            </div>
+                        </li>
+                        <li class="step-block mb-20">
+                            <div class="inline pt-2">
+                                <div class="w-[12px] h-[12px] rounded-full bg-blue-200 -ml-[7px]"></div>
+                                <div class="text-gray-700 text-lg ml-6 -mt-6">Программирование контроллеров и панелей HMI, преобразователей частоты</div>
+                            </div>
+                        </li>
+                        <li class="step-block mb-20">
+                            <div class="inline pt-2">
+                                <div class="w-[12px] h-[12px] rounded-full bg-blue-200 -ml-[7px]"></div>
+                                <div class="text-gray-700 text-lg ml-6 -mt-6">При вводе систем автоматизации и электрооборудования в эксплуатацию, Заказчику обязательно предоставляется полный пакет документов, предусмотренный при проведении монтажных и наладочных работах, приемо-сдаточных испытаний</div>
+                            </div>
+                        </li>
+                        <li class="step-block mb-20">
+                            <div class="inline pt-2">
+                                <div class="w-[12px] h-[12px] rounded-full bg-blue-200 -ml-[7px]"></div>
+                                <div class="text-gray-700 text-lg ml-6 -mt-6">На все приборы и оборудование предоставляется гарантия</div>
+                            </div>
+                        </li>
+                        <li class="step-block mb-20">
+                            <div class="inline pt-2">
+                                <div class="w-[12px] h-[12px] rounded-full bg-blue-200 -ml-[7px]"></div>
+                                <div class="text-gray-700 text-lg ml-6 -mt-6">На смонтированные и введенные в эксплуатацию системы автоматизации, электрооборудование предоставляется гарантийное обслуживание, техническая и сервисная поддержка</div>
+                            </div>
+                        </li>
+                        <li class="step-block mb-20">
+                            <div class="inline pt-2">
+                                <div class="w-[12px] h-[12px] rounded-full bg-blue-200 -ml-[7px]"></div>
+                                <div class="text-gray-700 text-lg ml-6 -mt-6">Проведение технического обслуживания средств АСУ ТП, КИПиА, электрооборудования, частотно-регулируемых приводов</div>
+                            </div>
+                        </li>
+                        <li class="step-block mb-20">
+                            <div class="inline pt-2">
+                                <div class="w-[12px] h-[12px] rounded-full bg-blue-200 -ml-[7px]"></div>
+                                <div class="text-gray-700 text-lg ml-6 -mt-6">Обучение технического персонала Заказчика безопасным методам эксплуатации введенных в эксплуатацию систем автоматизации технологических комплексов и систем энергоснабжения</div>
+                            </div>
+                        </li>
+                        <li class="step-block">
+                            <div class="inline pt-2">
+                                <div class="w-[12px] h-[12px] rounded-full bg-blue-200 -ml-[7px]"></div>
+                                <div class="text-gray-700 text-lg ml-6 -mt-6">Проектирование и изготовление установок и устройств управления электроприводом</div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-male-worker">
+        <div class="container-sm pt-36 pb-12">
+            <div class="flex flex-col">
+                <div class="flex items-center justify-center mb-16">
+                    <a class="hover:scale-105" href="https://www.youtube.com/watch?v=DamrVqhpY2s"><img src="../imgs/play.svg" width="60"></a>
+                </div>
+                <div class="flex flex-col justify-start">
+                    <p class="text-white font-semibold text-4xl uppercase mb-2">Посмотрите, как всё работает</p>
+                    <p class="font-light text-white text-lg">Все процессы и функции наших услуг</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-100">
+        <div class="container-sm px-6 py-20">
+            <div class="bg-six grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div class="flex flex-col justify-start">
+                    <p class="text-gray-800 font-bold text-4xl uppercase">партнёров производителей</p>
+                    <p class="text-gray-800 font-semibold text-xl mt-4">Компания «САР технология» основана в 2006 году как проектная и инжиниринговая фирма</p>
+                    <p class="text-gray-700 font-light text-lg mt-8">На сегодняшний день объединяет 4 крупнейших производственных предприятий Казахстана. Компания “САР технологии” следует стратегии постоянного улучшения качества и расширения ассортимента продукции</p>
+                </div>
+                <img src="../imgs/kaz_map.png" >
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-100">
+        <div class="container-sm py-16">
+            <div class="flex flex-col space-y-4 sm:flex-row sm:space-x-8 sm:space-y-0 sm:justify-between sm:items-center">
+                <div class="col-span-1 text-gray-800 font-bold text-3xl uppercase">Наши партнёры</div>
+                <div id="carousel-partners">
+                    <div class="carousel-inner space-x-2">
+                        <div class="carousel-slide-partner">
+                            <img src="../imgs/partners/image 5.png" alt="Image 1">
+                        </div>
+                        <div class="carousel-slide-partner">
+                            <img src="../imgs/partners/image 4.png" alt="Image 1" >
+                        </div>
+                        <div class="carousel-slide-partner">
+                            <img src="../imgs/partners/image 3.png" alt="Image 1" >
+                        </div>
+                        <div class="carousel-slide-partner">
+                            <img src="../imgs/partners/image 2.png" alt="Image 1" >
+                        </div>
+                        <div class="carousel-slide-partner">
+                            <img src="../imgs/partners/image 1.png" alt="Image 1">
+                        </div>
+                        <div style="opacity: 0;" class="carousel-slide-partner">
+                            <img src="../imgs/partners/image 1.png" alt="Image 1">
+                        </div>
+                        <div style="opacity: 0;" class="carousel-slide-partner">
+                            <img src="../imgs/partners/image 1.png" alt="Image 1">
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="flex justify-end mt-8">
+                <div class="flex items-center space-x-2">
+                    <button id="prev-btn-partner" class="bg-[#092A5E] px-4 py-3"><img src="../imgs/arrow-i-left-white.svg"></button>
+                    <button id="next-btn-partner" class="bg-[#092A5E] px-4 py-3"><img src="../imgs/arrow-long-right-white.svg"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#092A5E]">
+        <div class="container-sm py-16">
+            <div class="flex flex-col">
+                <p class="text-3xl font-semibold text-white uppercase">Благодарственные письма</p>
+                <div id="carousel-letters" class=" max-w-screen-lg mt-8 mx-auto relative">
+                    <div class="carousel-inner space-x-2">
+                        <div class="carousel-slide-license">
+                            <img src="../imgs/licenses/gov_license.png" alt="Image 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="carousel-slide-license">
+                            <img src="../imgs/licenses/gov_license1.png" alt="Image 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="carousel-slide-license">
+                            <img src="../imgs/licenses/kaz_munai.png" alt="Image 2" class="w-full h-full object-cover">
+                        </div>
+                        <div style="opacity: 0;" class="carousel-slide-license">
+                            <img src="../imgs/licenses/letter.png" alt="Image 2" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                
+                    <button id="prev-btn-letter" class="carousel-controls left-4 px-4 py-2"><img src="../imgs/arrow-i-left.svg" ></button>
+                    <button id="next-btn-letter" class="carousel-controls right-4 px-4 py-2"><img src="../imgs/arrow-i-right.svg" ></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-100 py-12">
+
+    </section>
+
+    <footer class="bg-black">
+        <div class="container-sm py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="flex items-start space-x-6">
+                    <img src="../imgs/logo_white.png" width="40" >
+                    <p class="text-white text-base font-light -mt-1">Проектирование, поставка, монтаж, наладка и обслуживание промышленного оборудования в области автоматизации</p>
+                </div>
+                <div class="flex flex-col justify-start">
+                    <p class="text-white text-base font-light mb-4">Республика Казахстан, 140000, г. Павлодар, ПКСТ “Иртыш”, ул. Кленовая 2</p>
+                    <p class="text-white text-base font-medium mb-2">+7 (7182) 64 44 37</p>
+                    <p class="text-white text-base font-medium mb-4">+7 701 428 22 40</p>
+                    <p class="text-white text-base font-light">office@sar.kz</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function() { AOS.init(); });
+    </script>
+    <script src="./script.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

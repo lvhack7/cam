@@ -1,0 +1,23 @@
+.bg-survey {
+    background-image: url("../imgs/bg-survey.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card:hover {
+    background-color: #092A5E;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 300ms ease-out;
+}
+
+.card:hover .open {
+    color: white;
+}
+
+.card:hover .line {
+    transition: 300ms ease-out;
+    width: 200px;
+    border-color: white;
+}
