@@ -247,3 +247,11 @@ function contact() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const imgs = document.querySelectorAll("img")
+
+    imgs.forEach((img, index) => {
+        img.loading = "lazy"
+    })
+})
+
