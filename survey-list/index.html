@@ -15,15 +15,15 @@
         <div class="container-sm px-6 py-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-cetner justify-between space-x-8">
-                    <img src="../imgs/logo.png" width="50">
+                    <img src="../imgs/logo.png" width="50" >
                     <div class="hidden xl:flex items-center justify-between space-x-4">
-                        <a href="../home/home.html" class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Главная</a>
-                        <a href="../about/about.html" class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">О компании</a>
-                        <a class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Каталог</a>
-                        <a href="../service/service.html" class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Услуги</a>
-                        <a class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Референс</a>
-                        <a class="font-light text-gray-700 hover:border-1 hover:cursor-pointer border-b border-gray-700">Опросные</a>
-                        <a class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Контакты</a>
+                        <a href="../index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Главная</a>
+                        <a href="../about/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">О компании</a>
+                        <a href="../catalog/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Каталог</a>
+                        <a href="../service/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Услуги</a>
+                        <a href="../reference-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Референс</a>
+                        <a href="../survey-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer border-b border-gray-700">Опросные</a>
+                        <a href="../contact/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Контакты</a>
                     </div>
                 </div>
                 <div class="flex items-center justify-between space-x-4">
@@ -32,7 +32,7 @@
                         <a class="font-light text-gray-700">+7 701 428 22 40</a>
                     </div>
                     <button class="bg-[#092A5E] rounded-xl px-4 py-3 text-white text-sm sm:px-6 sm:text-base font-medium">Обратный звонок</button>
-                    <button class="p-4"><img src="../imgs/menu.png" width="25"></button>
+                    <button class="xl:hidden p-4" onclick="toggleMenu()"><img src="../imgs/menu.png" width="25"></button>
                 </div>
             </div>
         </div>
@@ -92,12 +92,10 @@
                     </div>
                 </div>
                 <div class="card shadow bg-white p-6">
-                    <div class="flex flex-col justify-between h-full">
-                        <div class="text-base font-medium">Опросный лист для подбора датчиков и преобразователей давления</div>
-                        <div class="flex items-center space-x-2">
-                            <p class="open font-light text-gray-700 uppercase">Открыть</p>
-                            <div class="line border-b border-1 border-gray-500 w-[100px]"></div>
-                        </div>
+                    <div class="flex flex-col">
+                        <div class="text-base font-medium mb-8">Опросные листы по направлению "Анализ жидкости"</div>
+                        <div class="underline text-sm mb-4">опросный лист для подбора приборов промышленного анализа жидкости</div>
+                        <div class="underline text-sm mb-4">опросный лист для подбора пробоотборников</div>
                     </div>
                 </div>
                 <div class="card shadow bg-white p-6">
@@ -122,6 +120,51 @@
         </div>
     </section>
 
+    <section class="bg-[#092A5E]">
+        <div class="container-sm py-16">
+            <p class="font-medium text-white uppercase text-4xl mb-12">Получить больше информации о приборах и оборудовании Endress+Hauser можно здесь</p>
+            <button class="flex items-center space-x-8 bg-white rounded-lg px-6 py-3">
+                <span>Перейти</span> <img src="../imgs/arrow-right-black.svg" >
+            </button>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="container-sm py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
+                <div class="flex flex-col space-y-10">
+                    <p class="font-medium text-2xl">KEB</p>
+                    <div class="card shadow bg-white p-6 min-h-[250px]">
+                        <div class="flex flex-col justify-between h-full">
+                            <div class="text-base font-medium">Опросный лист для подбора комплектного <br>привода</div>
+                            <div class="flex items-center space-x-2">
+                                <p class="open font-light text-gray-700 uppercase">Открыть</p>
+                                <div class="line border-b border-1 border-gray-500 w-[100px]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-10">
+                    <p class="font-medium text-2xl">MODCON</p>
+                    <div class="card shadow bg-white p-6 min-h-[250px]">
+                        <div class="flex flex-col justify-between h-full">
+                            <div class="text-base font-medium">Каталог продукции для подбора оборудования</div>
+                            <div class="flex items-center space-x-2">
+                                <p class="open font-light text-gray-700 uppercase">Открыть</p>
+                                <div class="line border-b border-1 border-gray-500 w-[100px]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-10 mt-10">
+                <p class="font-medium text-2xl">WIKA</p>
+                <div id="wika" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="bg-black">
         <div class="container-sm py-12">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -139,10 +182,28 @@
         </div>
     </footer>
 
+    <div id="mobile-menu" class="hidden absolute top-0 left-0 w-full h-screen bg-gray-100 text-white px-12 py-6">
+        <div id="menu-close" class="flex justify-end p-4">
+            <button class="text-gray-800 text-5xl" onclick="toggleMenu()">
+                &times;
+            </button>
+        </div>
+        
+        <div id="mobile-links" class="flex flex-col text-xl space-y-4 pt-10">
+            <div data-href="../index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Главная</div>
+            <div data-href="../about/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">О компании</div>
+            <div data-href="../catalog/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Каталог</div>
+            <div data-href="../service/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Услуги</div>
+            <div data-href="../reference-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Референс</div>
+            <div data-href="../survey-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Опросные</div>
+            <div data-href="../contact/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Контакты</div>
+        </div>
+    </div>
+
     <script>
         window.addEventListener('load', function() { AOS.init(); });
     </script>
     <script src="./script.js"></script>
-    <!-- <script src="../home/script.js"></script> -->
+    <script src="../script.js" ></script>
 </body>
 </html>

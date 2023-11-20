@@ -5,7 +5,7 @@
 }
 
 .about {
-    transition: 400ms ease-in-out;
+    transform: 400ms ease-out;
 }
 
 .bg-cap {

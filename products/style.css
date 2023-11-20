@@ -1,0 +1,9 @@
+
+
+.product-item {
+    outline: 1px solid #131314;
+}
+
+.product-item:hover {
+    border: 2px solid black;
+}

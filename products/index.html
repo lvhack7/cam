@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" >
+    <link rel="stylesheet" href="../style.css" >
+    <link rel="stylesheet" href="../index.css" >
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="bg-white w-full">
+        <div class="container-sm px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-cetner justify-between space-x-8">
+                    <img src="../imgs/logo.png" width="50" >
+                    <div class="hidden xl:flex items-center justify-between space-x-4">
+                        <a href="../index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Главная</a>
+                        <a href="../about/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">О компании</a>
+                        <a href="../catalog/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer border-b border-gray-700">Каталог</a>
+                        <a href="../service/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Услуги</a>
+                        <a href="../reference-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Референс</a>
+                        <a href="../survey-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Опросные</a>
+                        <a href="../contact/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Контакты</a>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between space-x-4">
+                    <div class="hidden sm:flex flex-col space-y-2">
+                        <a class="font-light text-gray-700">+7 (7182) 64 44 37</a>
+                        <a class="font-light text-gray-700">+7 701 428 22 40</a>
+                    </div>
+                    <button class="bg-[#092A5E] rounded-xl px-4 py-3 text-white text-sm sm:px-6 sm:text-base font-medium">Обратный звонок</button>
+                    <button class="xl:hidden p-4" onclick="toggleMenu()"><img src="../imgs/menu.png" width="25"></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-white" id="top">
+        <div class="container-sm py-10">
+            <div class="flex flex-col space-y-12">
+                <p class="text-gray-700">Каталог / Endress+Hauser / Анализ жидкостей / Portable pH meters</p>
+                <p class="text-black font-semibold text-4xl uppercase">Portable pH meters</p>
+                <div class="flex items-center space-x-4">
+                    <p class="font-semibold">Сортировка:</p>
+                    <p class="text-gray-700">Вид</p>
+                    <p class="text-gray-700">Название</p>
+                    <p class="text-gray-700">Цена</p>
+                    <p class="text-gray-700">Тип продукта</p>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+    
+    <section class="bg-white">
+        <div class="container-sm pb-20">
+            <div class="flex items-end">
+                <div>
+                    <div class="grid grid-rows-2 grid-cols-4 grid-flow-row">
+                        <div class="row-span-2 col-span-2">
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/Liquiline Mobile CML18_s_stehend_001-2 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-8 p-8">
+                                        <p class="font-medium text-xl">Вторичный измерительный преобразователь Liquiline Mobile CML18</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/CPL51E_s_20.01 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-8 p-4">
+                                        <p class="font-medium text-xl">Датчик измерения pH Memosens CPL51E</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/CYZ71D 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-6 p-4">
+                                        <p class="font-medium text-xl">Мультипараметрическая программа Memobase Plus CYZ71D</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/Zero_point_gel_COY8_1 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-8 p-4">
+                                        <p class="font-medium text-xl">Гель для определения истинной нулевой точки COY8</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/Memosens CLL47E 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-8 p-4">
+                                        <p class="font-medium text-xl">Digital conductivity sensor Memosens CLL47E</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/Digital oxygen sensor Memosens COL37E 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-8 p-8">
+                                        <p class="font-medium text-xl">Digital oxygen sensor Memosens COL37E</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/Memosens CPL53E 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-8 p-8">
+                                        <p class="font-medium text-xl">Digital pH sensor Memosens CPL53E</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/Memosens CPL57E 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-8 p-8">
+                                        <p class="font-medium text-xl">Digital pH sensor Memosens CPL57E</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/Memosens CPL59E 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-8 p-8">
+                                        <p class="font-medium text-xl">Digital pH sensor Memosens CPL59E</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-rows-2 grid-cols-4 grid-flow-col">
+                        <div>
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/CYK20_Memosens cable_nonEx 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-8 p-4">
+                                        <p class="font-medium text-xl">Digital measuring cableCYK20</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/LiquilineTo Go CYM290 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-8 p-4">
+                                        <p class="font-medium text-xl">Multiparameter handheldLiquiline To Go CYM290</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/Converterbox CYM17_s_001 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-6 p-4">
+                                        <p class="font-medium text-xl">Memosens Analog Converter CYM17</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/LiquilineTo Go CYM291 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-8 p-4">
+                                        <p class="font-medium text-xl">Ex-certified multiparameter handheldLiquiline To Go CYM291</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-span-2 col-span-2">
+                            <div class="product-item bg-white h-full hover:cursor-pointer">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex justify-center items-center pt-10">
+                                        <img src="../imgs/products/CPY20 pH buffers 1.png">
+                                    </div>
+                                    <div class="flex flex-col space-y-8 p-8">
+                                        <p class="font-medium text-xl">Буферный раствор для датчиков измерения рН CPY20</p>
+                                        <img src="../imgs/arrow-right-black.svg" class="arrow" width="40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative bg-[#092A5E] px-6">
+                    <div class="flex justify-center items-center">
+                        <a href="#top" class="rounded-full w-[50px] h-[50px] bg-[#A9C7F3] -mt-4">
+                            <div class="flex items-center justify-center w-full h-full">
+                                <img src="../imgs/arrow-white.svg">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-center pb-20 pt-10">
+                        <div class="flex flex-col items-center space-y-10">
+                            <div class="h-[300px] w-[1px] border border-gray-400"></div>
+                            <div class="text-gray-400 -rotate-90">наверх</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-6 mt-10">
+                <div class="bg-[#A9C7F3] px-5 py-2 font-semibold text-3xl hover:cursor-pointer">1</div>
+                <div class="px-4 py-2 font-semibold text-3xl hover:cursor-pointer">2</div>
+                <div class="px-4 py-2 font-semibold text-3xl hover:cursor-pointer">3</div>
+                <div class="px-4 py-2 font-semibold text-3xl hover:cursor-pointer">4</div>
+                <div class="px-4 py-2 font-semibold text-3xl hover:cursor-pointer">5</div>
+                <div class="px-4 py-2 flex items-center space-x-4 font-semibold text-2xl hover:cursor-pointer">
+                    <span>Дальше</span>
+                    <img src="../imgs/arrow-right-black.svg" width="30" >
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <footer class="bg-black">
+        <div class="container-sm py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="flex items-start space-x-6">
+                    <img src="../imgs/logo_white.png" width="40" >
+                    <p class="text-white text-base font-light -mt-1">Проектирование, поставка, монтаж, наладка и обслуживание промышленного оборудования в области автоматизации</p>
+                </div>
+                <div class="flex flex-col justify-start">
+                    <p class="text-white text-base font-light mb-4">Республика Казахстан, 140000, г. Павлодар, ПКСТ “Иртыш”, ул. Кленовая 2</p>
+                    <p class="text-white text-base font-medium mb-2">+7 (7182) 64 44 37</p>
+                    <p class="text-white text-base font-medium mb-4">+7 701 428 22 40</p>
+                    <p class="text-white text-base font-light">office@sar.kz</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="mobile-menu" class="hidden absolute top-0 left-0 w-full h-screen bg-gray-100 text-white px-12 py-6">
+        <div id="menu-close" class="flex justify-end p-4">
+            <button class="text-gray-800 text-5xl" onclick="toggleMenu()">
+                &times;
+            </button>
+        </div>
+        
+        <div id="mobile-links" class="flex flex-col text-xl space-y-4 pt-10">
+            <div data-href="../index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Главная</div>
+            <div data-href="../about/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">О компании</div>
+            <div data-href="../catalog/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Каталог</div>
+            <div data-href="../service/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Услуги</div>
+            <div data-href="../reference-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Референс</div>
+            <div data-href="../survey-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Опросные</div>
+            <div data-href="../contact/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Контакты</div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() { AOS.init(); });
+    </script>
+    <script src="../script.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

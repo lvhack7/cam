@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style.css" >
     <link rel="stylesheet" href="./index.css" >
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <nav class="bg-white w-full">
@@ -15,13 +17,13 @@
                 <div class="flex items-cetner justify-between space-x-8">
                     <img src="../imgs/logo.png" width="50" >
                     <div class="hidden xl:flex items-center justify-between space-x-4">
-                        <a class="font-light text-gray-700 hover:border-1 hover:cursor-pointer border-b border-gray-700">Главная</a>
-                        <a href="../about/about.html" class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">О компании</a>
-                        <a class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Каталог</a>
-                        <a href="../service/service.html" class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Услуги</a>
-                        <a class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Референс</a>
-                        <a href="../survey-list/survey-list.html" class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Опросные</a>
-                        <a class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Контакты</a>
+                        <a href="index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer border-b border-gray-700">Главная</a>
+                        <a href="about/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">О компании</a>
+                        <a href="catalog/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Каталог</a>
+                        <a href="service/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Услуги</a>
+                        <a href="reference-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Референс</a>
+                        <a href="survey-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Опросные</a>
+                        <a href="contact/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Контакты</a>
                     </div>
                 </div>
                 <div class="flex items-center justify-between space-x-4">
@@ -30,7 +32,7 @@
                         <a class="font-light text-gray-700">+7 701 428 22 40</a>
                     </div>
                     <button class="bg-[#092A5E] rounded-xl px-4 py-3 text-white text-sm sm:px-6 sm:text-base font-medium">Обратный звонок</button>
-                    <button class="p-4"><img src="../imgs/menu.png" width="25"></button>
+                    <button class="xl:hidden p-4" onclick="toggleMenu()"><img src="../imgs/menu.png" width="25"></button>
                 </div>
             </div>
         </div>
@@ -50,46 +52,46 @@
         </div>
     </section>
 
-    <section class="relative hidden lg:block -mt-20">
-        <div class="flex justify-center items-center">
-            <div class="flex items-center">
-                <div class="card bg-white shadow-md w-[180px] text-gray-800 mx-auto">
-                    <div class="flex flex-col items-center py-8">
+    <section class="lg:-mt-20 mt-8">
+        <div class="container-sm px-10">
+            <div class="grid grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-0">
+                <div class="card bg-white shadow-md px-10 py-10 text-gray-800 mx-auto">
+                    <div class="flex flex-col items-center">
                         <div class="border-1 border-b border-gray-400 w-[120px] mb-10"></div>
                         <div class="uppercase font-light text-lg text-center mb-10">Enress+hauser</div>
                         <img class="arrow-icon" src="../imgs/arrows.svg" width="15" >
                     </div>
                 </div>
-                <div class="card bg-white shadow-md w-[180px] text-gray-800 mx-auto">
-                    <div class="flex flex-col items-center py-8">
+                <div class="card bg-white shadow-md px-10 py-10 text-gray-800 mx-auto">
+                    <div class="flex flex-col items-center">
                         <div class="border-1 border-b border-gray-400 w-[120px] mb-10"></div>
                         <div class="uppercase font-light text-lg text-center mb-10">KEB</div>
                         <img class="arrow-icon" src="../imgs/arrows.svg" width="15" >
                     </div>
                 </div>
-                <div class="card bg-white shadow-md w-[180px] text-gray-800 mx-auto">
-                    <div class="flex flex-col items-center py-8">
+                <div class="card bg-white shadow-md px-10 py-10 text-gray-800 mx-auto">
+                    <div class="flex flex-col items-center">
                         <div class="border-1 border-b border-gray-400 w-[120px] mb-10"></div>
                         <div class="uppercase font-light text-lg text-center mb-10">Satec</div>
                         <img class="arrow-icon" src="../imgs/arrows.svg" width="15" >
                     </div>
                 </div>
-                <div class="card bg-white shadow-md w-[180px] text-gray-800 mx-auto">
-                    <div class="flex flex-col items-center py-8">
+                <div class="card bg-white shadow-md px-10 py-10 text-gray-800 mx-auto">
+                    <div class="flex flex-col items-center">
                         <div class="border-1 border-b border-gray-400 w-[120px] mb-10"></div>
                         <div class="uppercase font-light text-lg text-center mb-10">Modcon</div>
                         <img class="arrow-icon" src="../imgs/arrows.svg" width="15" >
                     </div>
                 </div>
-                <div class="card bg-white shadow-md w-[180px] text-gray-800 mx-auto">
-                    <div class="flex flex-col items-center py-8">
+                <div class="card bg-white shadow-md px-10 py-10 text-gray-800 mx-auto">
+                    <div class="flex flex-col items-center ">
                         <div class="border-1 border-b border-gray-400 w-[120px] mb-10"></div>
                         <div class="uppercase font-light text-lg text-center mb-10">Wika</div>
                         <img class="arrow-icon" src="../imgs/arrows.svg" width="15" >
                     </div>
                 </div>
-                <div class="card bg-white shadow-md w-[180px] text-gray-800 mx-auto">
-                    <div class="flex flex-col items-center py-8">
+                <div class="card bg-white shadow-md px-10 py-10 text-gray-800 mx-auto">
+                    <div class="flex flex-col items-center">
                         <div class="border-1 border-b border-gray-400 w-[120px] mb-10"></div>
                         <div class="uppercase font-light text-lg text-center mb-10">Supcon</div>
                         <img class="arrow-icon" src="../imgs/arrows.svg" width="15" >
@@ -102,7 +104,7 @@
     <section>
         <div class="relative">
             <div class="container-sm px-4 py-20 lg:pt-52 lg:pb-40">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
                     <div class="bg-cap flex flex-col space-y-8">
                         <p class="font-bold text-gray-800 uppercase text-4xl">Компания CAP Технология</p>
                         <p class="font-light text-xl text-gray-700">Компания «САР технология» основана в 2006 году
@@ -115,13 +117,28 @@
                             <button class="flex items-center bg-[#092A5E] rounded-xl px-6 py-3 text-white text-base font-medium">Подробнее <img class="ml-4" src="../imgs/arrow-right.svg" width="20"></button>
                         </div>
                     </div>
-                    <img src="../imgs/workers.png" >
+                    <img class="hidden md:block" src="../imgs/workers.png" >
                 </div>
             </div>
-            <div class="absolute -top-8 lg:top-[5%] right-0">
-                <div class="flex items-center">
+            <div class="hidden md:flex absolute -top-8 lg:top-[5%] right-5">
+                <div class="flex items-center justify-between">
                     <button class="bg-white shadow rounded-xl px-4 py-2 -mr-6">Свяжитесь с нами</button>
-                    <img  src="../imgs/chat.png" width="150" >
+                    <img onclick="contact()" class="hover:cursor-pointer hover:scale-105" src="./imgs/chat.png" width="150" >
+                    <div class="hidden flex items-center" id="contact-panel">
+                        <img src="./imgs/arrow-long.svg" class="-ml-4" >
+                        <div class="flex flex-col space-y-3 ml-5">
+                            <a class="bg-[#A9C7F3] px-2 py-3 rounded-full flex items-center justify-center hover:cursor-pointer hover:scale-110">
+                                <img src="./imgs/phone.svg" width="25" >
+                            </a>
+                            <a class="bg-[#A9C7F3] p-2 rounded-full flex items-center justify-center hover:cursor-pointer hover:scale-110">
+                                <img src="./imgs/whatsapp-icon.svg" width="30" >
+                            </a>
+                            <div onclick="contact()" class="bg-[#183C73] px-2 py-1 rounded-full text-white text-4xl flex items-center justify-center hover:cursor-pointer hover:scale-110">
+                                &times;
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -133,31 +150,31 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div></div>
                 <div class="flex flex-col space-y-12 px-4 md:px-0">
-                    <p class="text-4xl font-medium text-white uppercase">За 17 лет существования компания завоевала репутацию надежного партнера</p>
+                    <p data-aos="fade-right" data-aos-once="true" data-aos-delay="200" data-aos-duration="600" class="text-4xl font-medium text-white uppercase">За 17 лет существования компания завоевала репутацию надежного партнера</p>
                     <div class="grid grid-cols-2 gap-8">
                         <div class="flex flex-col items-start space-y-2">
-                            <div class="flex items-center space-x-2">
+                            <div data-aos="fade-right" data-aos-once="true" data-aos-delay="400" data-aos-duration="1000" class="flex items-center space-x-2">
                                 <p class="text-white text-3xl">2006</p>
                                 <img src="../imgs/arrow-dig.svg" width="20" >
                             </div>
                             <p class="text-white font-light">год создания</p>
                         </div>
                         <div class="flex flex-col items-start space-y-2">
-                            <div class="flex items-center space-x-2">
+                            <div data-aos="fade-left" data-aos-once="true" data-aos-delay="800" data-aos-duration="1000" class="flex items-center space-x-2">
                                 <p class="text-white text-3xl">15000</p>
                                 <img src="../imgs/arrow-dig.svg" width="20" >
                             </div>
                             <p class="text-white font-light">уставновленных приборов</p>
                         </div>
                         <div class="flex flex-col items-start space-y-2">
-                            <div class="flex items-center space-x-2">
+                            <div data-aos="fade-right" data-aos-once="true" data-aos-delay="1200" data-aos-duration="1000" class="flex items-center space-x-2">
                                 <p class="text-white text-3xl">200</p>
                                 <img src="../imgs/arrow-dig.svg" width="20" >
                             </div>
                             <p class="text-white font-light">заказчиков</p>
                         </div>
                         <div class="flex flex-col items-start space-y-2">
-                            <div class="flex items-center space-x-2">
+                            <div data-aos="fade-left" data-aos-once="true" data-aos-delay="1600" data-aos-duration="1000" class="flex items-center space-x-2">
                                 <p class="text-white text-3xl">30</p>
                                 <img src="../imgs/arrow-dig.svg" width="20" >
                             </div>
@@ -245,7 +262,7 @@
 
     <section class="bg-gray-100">
         <div class="container-sm py-16">
-            <div class="flex flex-col space-y-4 sm:flex-row sm:space-x-8 sm:space-y-0 sm:justify-between sm:items-center">
+            <div class="flex flex-col space-y-10 md:flex-row md:space-x-8 md:space-y-0 md:justify-between md:items-center">
                 <div class="col-span-1 text-gray-800 font-bold text-3xl uppercase">Наши партнёры</div>
                 <div id="carousel-partners">
                     <div class="carousel-inner space-x-2">
@@ -331,6 +348,27 @@
         </div>
     </footer>
 
+    <div id="mobile-menu" class="hidden absolute top-0 left-0 w-full h-screen bg-gray-100 text-white px-12 py-6">
+        <div id="menu-close" class="flex justify-end p-4">
+            <button class="text-gray-800 text-5xl" onclick="toggleMenu()">
+                &times;
+            </button>
+        </div>
+        
+        <div id="mobile-links" class="flex flex-col text-xl space-y-4 pt-10">
+            <div data-href="index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Главная</div>
+            <div data-href="about/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">О компании</div>
+            <div data-href="catalog/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Каталог</div>
+            <div data-href="service/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Услуги</div>
+            <div data-href="reference-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Референс</div>
+            <div data-href="survey-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Опросные</div>
+            <div data-href="contact/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Контакты</div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() { AOS.init(); });
+    </script>
     <script src="./script.js" ></script>
 </body>
 </html>

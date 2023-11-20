@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" >
+    <link rel="stylesheet" href="../index.css" >
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="bg-white w-full">
+        <div class="container-sm px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-cetner justify-between space-x-8">
+                    <img src="../imgs/logo.png" width="50" >
+                    <div class="hidden xl:flex items-center justify-between space-x-4">
+                        <a href="../index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Главная</a>
+                        <a href="../about/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">О компании</a>
+                        <a href="../catalog/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Каталог</a>
+                        <a href="../service/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Услуги</a>
+                        <a href="../reference-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Референс</a>
+                        <a href="../survey-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Опросные</a>
+                        <a href="../contact/index.html" class="font-light text-gray-700 border-1 cursor-pointer hover:border-b hover:border-gray-700">Контакты</a>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between space-x-4">
+                    <div class="hidden sm:flex flex-col space-y-2">
+                        <a class="font-light text-gray-700">+7 (7182) 64 44 37</a>
+                        <a class="font-light text-gray-700">+7 701 428 22 40</a>
+                    </div>
+                    <button class="bg-[#092A5E] rounded-xl px-4 py-3 text-white text-sm sm:px-6 sm:text-base font-medium">Обратный звонок</button>
+                    <button class="xl:hidden p-4" onclick="toggleMenu()"><img src="../imgs/menu.png" width="25"></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-contact">
+        <div class="container-sm py-32">
+            <div class="flex flex-col justify-start">
+                <p class="text-white font-bold text-4xl uppercase">
+                    контакты компании <br>“САР технология”
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="container-sm py-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-[#A9C7F3] flex flex-col space-y-8 px-10 pb-4">
+                    <p class="text-8xl text-center font-bold text-[#092A5E42] -mt-1">01</p>
+                    <div class="flex flex-col space-y-6 mx-auto">
+                        <p class="font-semibold text-lg">АДРЕС:</p>
+                        <div class="flex items-start space-x-2">
+                            <img src="../imgs/location.svg" width="12" >
+                            <p class="text-gray-700 text-sm -mt-1">Республика Казахстан, 140000, г. Павлодар, ПКСТ «Иртыш», 
+                                ул. Кленовая 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#092A5E] flex flex-col space-y-8 px-6 pb-4">
+                    <p class="text-8xl text-center font-bold text-[#F1F1F542] -mt-1">02</p>
+                    <div class="flex flex-col space-y-6 mx-auto text-white">
+                        <p class="font-semibold text-lg">ТЕЛЕФОНЫ:</p>
+                        <div class="flex items-start space-x-2">
+                            <img src="../imgs/phone.svg" width="12" >
+                            <div class="flex flex-col text-gray-300 -mt-1">
+                                <p class="text-sm">+7 (7182) 64 44 37</p>
+                                <p class="text-sm">+7 701 428 2240</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-300">Прием звонков: с 9:00 до 18:00 (Пн-Пт) / Обед с 13:00 до 14:00 / Сб-Вс выходной</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex flex-col space-y-2 text-sm">
+                                <p class="text-white font-medium">Отдел снабжения:</p>
+                                <p class="text-gray-300">+7 701 428 2240</p>
+                            </div>
+                            <div class="flex flex-col space-y-2 text-sm">
+                                <p class="text-white font-medium">Логистика:</p>
+                                <p class="text-gray-300">+7 701 428 2240</p>
+                            </div>
+                            <div class="flex flex-col space-y-2 text-sm">
+                                <p class="text-white font-medium">Тех поддержка:</p>
+                                <p class="text-gray-300">+7 701 428 2240</p>
+                            </div>
+                            <div class="flex flex-col space-y-2 text-sm">
+                                <p class="text-white font-medium">Бухгалтерия:</p>
+                                <p class="text-gray-300">+7 701 428 2240</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#A9C7F3] flex flex-col space-y-8 px-10 pb-4">
+                    <p class="text-8xl text-center font-bold text-[#092A5E42] -mt-1">03</p>
+                    <div class="flex flex-col space-y-6 mx-auto">
+                        <p class="font-semibold text-lg">ИНФОРМАЦИЯ:</p>
+                        <div class="flex items-start space-x-2">
+                            <img src="../imgs/email.svg" width="15" >
+                            <p class="text-gray-700 text-sm -mt-1">Email: office@sar.kz</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#092A5E]">
+        <div class="container-sm py-10">
+            <form class="flex flex-col space-y-8">
+                <p class="text-white text-4xl font-semibold uppercase">Отправить сообщение</p>
+                <div class="flex flex-col space-y-2 justify-start">
+                    <label class="text-white font-medium text-lg">Представьтесь</label>
+                    <input
+                        type="text"
+                        class="bg-white border-none rounded-lg text-gray-700 px-6 py-4 outline-none"
+                        placeholder="Петров Константин Игоревич"
+                        required
+                    >
+                </div>
+                <div class="flex flex-col space-y-2 justify-start">
+                    <label class="text-white font-medium text-lg">Телефон</label>
+                    <input
+                        type="tel"
+                        class="bg-white border-none rounded-lg text-gray-700 px-6 py-4 outline-none"
+                        placeholder="+7 (999) 999-99-99"
+                        required
+                    >
+                </div>
+                <div class="flex flex-col space-y-2 justify-start">
+                    <label class="text-white font-medium text-lg">Сообщение</label>
+                    <textarea
+                        rows="8"
+                        type="text"
+                        class="bg-white border-none rounded-lg text-gray-700 px-6 py-4 outline-none"
+                        placeholder="Введите сообщение"
+                        required
+                    ></textarea>
+                </div>
+                <div class="flex justify-end">
+                    <button class="flex items-center space-x-6 rounded-lg bg-white text-gray-800 px-6 py-3">
+                        <span class="font-medium">Отправить</span>
+                        <img src="../imgs/arrow-right-black.svg" >
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="container-sm py-20">
+            <img class="w-full h-full" src="../imgs/map-location.png" >
+        </div>
+    </section>
+
+    <footer class="bg-black">
+        <div class="container-sm py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="flex items-start space-x-6">
+                    <img src="../imgs/logo_white.png" width="40" >
+                    <p class="text-white text-base font-light -mt-1">Проектирование, поставка, монтаж, наладка и обслуживание промышленного оборудования в области автоматизации</p>
+                </div>
+                <div class="flex flex-col justify-start">
+                    <p class="text-white text-base font-light mb-4">Республика Казахстан, 140000, г. Павлодар, ПКСТ “Иртыш”, ул. Кленовая 2</p>
+                    <p class="text-white text-base font-medium mb-2">+7 (7182) 64 44 37</p>
+                    <p class="text-white text-base font-medium mb-4">+7 701 428 22 40</p>
+                    <p class="text-white text-base font-light">office@sar.kz</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="mobile-menu" class="hidden absolute top-0 left-0 w-full h-screen bg-gray-100 text-white px-12 py-6">
+        <div id="menu-close" class="flex justify-end p-4">
+            <button class="text-gray-800 text-5xl" onclick="toggleMenu()">
+                &times;
+            </button>
+        </div>
+        
+        <div id="mobile-links" class="flex flex-col text-xl space-y-4 pt-10">
+            <div data-href="../index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Главная</div>
+            <div data-href="../about/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">О компании</div>
+            <div data-href="../catalog/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Каталог</div>
+            <div data-href="../service/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Услуги</div>
+            <div data-href="../reference-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Референс</div>
+            <div data-href="../survey-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Опросные</div>
+            <div data-href="../contact/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Контакты</div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() { AOS.init(); });
+    </script>
+    <script src="./script.js"></script>
+    <script src="../script.js" ></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.bg-catalog {
+    background-image: url("../imgs/bg-catalog.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.catalog-item:hover {
+    background-color: #3B81EC;
+    transition: 200ms ease-in-out;
+    color: white;
+    transform: scale(1.05);
+}
+
+.catalog-item:hover .arrow {
+    content: url("../imgs/arrows-white.png");
+}

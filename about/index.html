@@ -18,13 +18,13 @@
                 <div class="flex items-cetner justify-between space-x-8">
                     <img src="../imgs/logo.png" width="50" >
                     <div class="hidden xl:flex items-center justify-between space-x-4">
-                        <a href="../index.html" class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Главная</a>
-                        <a class="font-light text-gray-700 hover:border-1 hover:cursor-pointer border-b border-gray-700">О компании</a>
-                        <a class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Каталог</a>
-                        <a href="../service/service.html" class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Услуги</a>
-                        <a class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Референс</a>
-                        <a href="../survey-list/survey-list.html" class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Опросные</a>
-                        <a class="font-light text-sm text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Контакты</a>
+                        <a href="../index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Главная</a>
+                        <a href="../about/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer border-b border-gray-700">О компании</a>
+                        <a href="../catalog/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Каталог</a>
+                        <a href="../service/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Услуги</a>
+                        <a href="../reference-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Референс</a>
+                        <a href="../survey-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Опросные</a>
+                        <a href="../contact/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Контакты</a>
                     </div>
                 </div>
                 <div class="flex items-center justify-between space-x-4">
@@ -33,7 +33,7 @@
                         <a class="font-light text-gray-700">+7 701 428 22 40</a>
                     </div>
                     <button class="bg-[#092A5E] rounded-xl px-4 py-3 text-white text-sm sm:px-6 sm:text-base font-medium">Обратный звонок</button>
-                    <button class="p-4"><img src="../imgs/menu.png" width="25"></button>
+                    <button class="xl:hidden p-4" onclick="toggleMenu()"><img src="../imgs/menu.png" width="25"></button>
                 </div>
             </div>
         </div>
@@ -209,18 +209,24 @@
 
     <section class="bg-[#092A5E]">
         <div class="container-sm px-8 py-10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div class="bg-cap flex flex-col justify-start space-y-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-cap flex flex-col justify-start space-y-12">
                     <div class="border-b border-1 border-white w-full"></div>
-                    <div class="flex items-center justify-between">
-                        <p data-aos="fade-right" data-aos-once="true" data-aos-delay="400" data-aos-duration="1000"  class="text-white font-semibold text-4xl">8500 МЛН KZT</p>
-                        <p data-aos="fade-left" data-aos-once="true" data-aos-delay="500" data-aos-duration="1100" class="text-white font-semibold text-xl">оборот <br> компании</p>
+                    <p data-aos="fade-right" data-aos-once="true" data-aos-delay="400" data-aos-duration="1000"  class="text-gray-400 font-bold text-4xl">8500 МЛН KZT</p>
+                    <div class="grid grid-cols-2">
+                        <p data-aos="fade-right" data-aos-once="true" data-aos-delay="400" data-aos-duration="1000"  class="text-white font-bold text-4xl">18200 ед.</p>
+                        <p data-aos="fade-left" data-aos-once="true" data-aos-delay="500" data-aos-duration="1100" class="text-white font-semibold text-xl">количество поставленного оборудования</p>
                     </div>
-                    <p data-aos="fade-right" data-aos-once="true" data-aos-delay="700" data-aos-duration="1000" class="text-gray-400 font-bold text-4xl">18200</p>
-                    <p data-aos="fade-right" data-aos-once="true" data-aos-delay="1000" data-aos-duration="1000" class="text-gray-400 font-bold text-4xl">112</p>
-                    <p data-aos="fade-right" data-aos-once="true" data-aos-delay="1300" data-aos-duration="1000" class="text-gray-400 font-bold text-4xl">15000</p>
+                    <div class="grid grid-cols-2">
+                        <p data-aos="fade-right" data-aos-once="true" data-aos-delay="600" data-aos-duration="1000"  class="text-white font-bold text-4xl">112 компл.</p>
+                        <p data-aos="fade-left" data-aos-once="true" data-aos-delay="700" data-aos-duration="1100" class="text-white font-semibold text-xl">системы коммерческого учета в резервуарах</p>
+                    </div>
+                    <div class="grid grid-cols-2">
+                        <p data-aos="fade-right" data-aos-once="true" data-aos-delay="800" data-aos-duration="1000"  class="text-white font-bold text-4xl">15000 ед.</p>
+                        <p data-aos="fade-left" data-aos-once="true" data-aos-delay="900" data-aos-duration="1100" class="text-white font-semibold text-xl">приборы КИПиА и АСУ ТП нижнего уровня</p>
+                    </div>
                 </div>
-                <img src="../imgs/engineer.png" >
+                <img class="hidden md:block" src="../imgs/engineer.png" >
             </div>
         </div>
     </section>
@@ -287,7 +293,7 @@
 
     <section class="bg-gray-100">
         <div class="container-sm py-16">
-            <div class="flex flex-col space-y-4 sm:flex-row sm:space-x-8 sm:space-y-0 sm:justify-between sm:items-center">
+            <div class="flex flex-col space-y-10 md:flex-row md:space-x-8 md:space-y-0 md:justify-between md:items-center">
                 <div class="col-span-1 text-gray-800 font-bold text-3xl uppercase">Наши партнёры</div>
                 <div id="carousel-partners">
                     <div class="carousel-inner space-x-2">
@@ -372,6 +378,24 @@
             </div>
         </div>
     </footer>
+    
+    <div id="mobile-menu" class="hidden absolute top-0 left-0 w-full h-screen bg-gray-100 text-white px-12 py-6">
+        <div id="menu-close" class="flex justify-end p-4">
+            <button class="text-gray-800 text-5xl" onclick="toggleMenu()">
+                &times;
+            </button>
+        </div>
+        
+        <div id="mobile-links" class="flex flex-col text-xl space-y-4 pt-10">
+            <div data-href="../index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Главная</div>
+            <div data-href="../about/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">О компании</div>
+            <div data-href="../catalog/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Каталог</div>
+            <div data-href="../service/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Услуги</div>
+            <div data-href="../reference-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Референс</div>
+            <div data-href="../survey-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Опросные</div>
+            <div data-href="../contact/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Контакты</div>
+        </div>
+    </div>
 
     <script>
         window.addEventListener('load', function() { AOS.init(); });
