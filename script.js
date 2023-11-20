@@ -1,9 +1,27 @@
-function isMobile() {
-    // Set the breakpoint at which you consider the device to be mobile
-    const mobileWidth = 768; // Adjust this value based on your design needs
-  
-    // Check if the viewport width is less than the mobileWidth
-    return window.innerWidth < mobileWidth;
+const isMobile = () => {
+
+    // User agent string method
+    let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    // Screen resolution method
+    if (!isMobile) {
+        let screenWidth = window.screen.width;
+        let screenHeight = window.screen.height;
+        isMobile = (screenWidth < 768 || screenHeight < 768);
+    }
+    
+    // Touch events method
+    if (!isMobile) {
+        isMobile = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+    }
+    
+    // CSS media queries method
+    if (!isMobile) {
+        let bodyElement = document.getElementsByTagName('body')[0];
+        isMobile = window.getComputedStyle(bodyElement).getPropertyValue('content').indexOf('mobile') !== -1;
+    }
+    
+    return isMobile
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -18,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     function updateCarouselLicense() {
-        if (isMobile()) {
+        if (isMobile() || window.innerWidth < 768) {
             slides.forEach((slide, index) => {
                 const offset = index - currentIndex;
                 slide.style.opacity = Math.abs(offset) < 1 ? 1 : 0; // Show only the three adjacent slides
@@ -27,30 +45,30 @@ document.addEventListener("DOMContentLoaded", function () {
             inner.style.transform = `translateX(-${currentIndex * (100)}%)`;
         } else {
             slides.forEach((slide, index) => {
-                const offset = index - currentIndex - 1;
-                slide.style.opacity = Math.abs(offset) <= 1 ? 1 : 0; // Show only the three adjacent slides
+                const offset = index - currentIndex - 2;
+                slide.style.opacity = Math.abs(offset) < 3 ? 1 : 0; // Show only the three adjacent slides
             });
 
-            inner.style.transform = `translateX(-${currentIndex * (100/3)}%)`;
+            inner.style.transform = `translateX(-${currentIndex * (100/4)}%)`;
         }
     }
 
     function nextSlideLicense() {
-        if (isMobile()) {
+        if (isMobile() || window.innerWidth < 768) {
             currentIndex = (currentIndex + 1) % (slides.length); // Subtract 2 for the number of visible slides
             updateCarouselLicense();
         } else {
-            currentIndex = (currentIndex + 1) % (slides.length - 2); // Subtract 2 for the number of visible slides
+            currentIndex = (currentIndex + 1) % (slides.length - 3); // Subtract 2 for the number of visible slides
             updateCarouselLicense();    
         }
     }
 
     function prevSlideLicense() {
-        if (isMobile()) {
+        if (isMobile() || window.innerWidth < 768) {
             currentIndex = (currentIndex - 1 + (slides.length)) % (slides.length);
             updateCarouselLicense();
         } else {
-            currentIndex = (currentIndex - 1 + (slides.length - 2)) % (slides.length - 2);
+            currentIndex = (currentIndex - 1 + (slides.length - 3)) % (slides.length - 3);
             updateCarouselLicense();
         }
         
@@ -66,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     const carousel = document.getElementById("carousel-objects");
     const inner = carousel.querySelector(".carousel-inner");
-    const slides = inner.querySelectorAll(".carousel-slide-license");
+    const slides = inner.querySelectorAll(".carousel-slide-object");
 
     let currentIndex = 0;
 
@@ -75,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     function updateCarouselLicense() {
-        if (isMobile()) {
+        if (isMobile() || window.innerWidth < 768) {
             slides.forEach((slide, index) => {
                 const offset = index - currentIndex;
                 slide.style.opacity = Math.abs(offset) < 1 ? 1 : 0; // Show only the three adjacent slides
@@ -93,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function nextSlideLicense() {
-        if (isMobile()) {
+        if (isMobile() || window.innerWidth < 768) {
             currentIndex = (currentIndex + 1) % (slides.length); // Subtract 2 for the number of visible slides
             updateCarouselLicense();
         } else {
@@ -103,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function prevSlideLicense() {
-        if (isMobile()) {
+        if (isMobile() || window.innerWidth < 768) {
             currentIndex = (currentIndex - 1 + (slides.length)) % (slides.length);
             updateCarouselLicense();
         } else {
@@ -165,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     function updateCarouselLicense() {
-        if (isMobile()) {
+        if (isMobile() || window.innerWidth < 768) {
             slides.forEach((slide, index) => {
                 const offset = index - currentIndex;
                 slide.style.opacity = Math.abs(offset) < 1 ? 1 : 0; // Show only the three adjacent slides
@@ -174,30 +192,30 @@ document.addEventListener("DOMContentLoaded", function () {
             inner.style.transform = `translateX(-${currentIndex * (100)}%)`;
         } else {
             slides.forEach((slide, index) => {
-                const offset = index - currentIndex - 1;
-                slide.style.opacity = Math.abs(offset) <= 1 ? 1 : 0; // Show only the three adjacent slides
+                const offset = index - currentIndex - 2;
+                slide.style.opacity = Math.abs(offset) < 3 ? 1 : 0; // Show only the three adjacent slides
             });
 
-            inner.style.transform = `translateX(-${currentIndex * (100/3)}%)`;
+            inner.style.transform = `translateX(-${currentIndex * (100/4)}%)`;
         }
     }
 
     function nextSlideLicense() {
-        if (isMobile()) {
+        if (isMobile() || window.innerWidth < 768) {
             currentIndex = (currentIndex + 1) % (slides.length); // Subtract 2 for the number of visible slides
             updateCarouselLicense();
         } else {
-            currentIndex = (currentIndex + 1) % (slides.length - 2); // Subtract 2 for the number of visible slides
+            currentIndex = (currentIndex + 1) % (slides.length - 3); // Subtract 2 for the number of visible slides
             updateCarouselLicense();    
         }
     }
 
     function prevSlideLicense() {
-        if (isMobile()) {
+        if (isMobile() || window.innerWidth < 768) {
             currentIndex = (currentIndex - 1 + (slides.length)) % (slides.length);
             updateCarouselLicense();
         } else {
-            currentIndex = (currentIndex - 1 + (slides.length - 2)) % (slides.length - 2);
+            currentIndex = (currentIndex - 1 + (slides.length - 3)) % (slides.length - 3);
             updateCarouselLicense();
         }
         
@@ -244,6 +262,16 @@ function contact() {
         contact.classList.remove("hidden")
     } else {
         contact.classList.add("hidden")
+    }
+}
+
+function toggleDropdown() {
+    var dropdown = document.getElementById("dropdown-catalog")
+
+    if (dropdown.classList.contains("hidden")) {
+        dropdown.classList.remove("hidden")
+    } else {
+        dropdown.classList.add("hidden")
     }
 }
 

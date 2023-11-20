@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="../style.css" >
     <link rel="stylesheet" href="../index.css" >
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <nav class="bg-white w-full">
@@ -20,7 +22,39 @@
                     <div class="hidden xl:flex items-center justify-between space-x-4">
                         <a href="../index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Главная</a>
                         <a href="../about/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer border-b border-gray-700">О компании</a>
-                        <a href="../catalog/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Каталог</a>
+                        <div class="relative">
+                            <button onclick="toggleDropdown()" class="flex items-center justify-between font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">
+                                Каталог<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                  </svg>
+                            </button>
+                            <div id="dropdown-catalog" class="hidden absolute bg-catalog-dropdown w-64 left-16 p-3 z-10">
+                                <a href="/catalog/index.html" class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 mt-2 hover:cursor-pointer">
+                                    <span>Endress+Hauser</span>
+                                    <img class="hidden" src="./imgs/arrow-long-right-white.svg" >
+                                </a>
+                                <a class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 hover:cursor-pointer">
+                                    <span>Keb</span>
+                                    <img class="hidden" src="../imgs/arrow-long-right-white.svg" >
+                                </a>
+                                <a class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 hover:cursor-pointer">
+                                    <span>Satec</span>
+                                    <img class="hidden" src="../imgs/arrow-long-right-white.svg" >
+                                </a>
+                                <a class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 hover:cursor-pointer">
+                                    <span>Modcon</span>
+                                    <img class="hidden" src="../imgs/arrow-long-right-white.svg" >
+                                </a>
+                                <a class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 hover:cursor-pointer">
+                                    <span>Wika</span>
+                                    <img class="hidden" src="../imgs/arrow-long-right-white.svg" >
+                                </a>
+                                <a class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 hover:cursor-pointer">
+                                    <span>Supcon</span>
+                                    <img class="hidden" src="../imgs/arrow-long-right-white.svg" >
+                                </a>
+                            </div>
+                        </div>
                         <a href="../service/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Услуги</a>
                         <a href="../reference-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Референс</a>
                         <a href="../survey-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Опросные</a>
@@ -56,12 +90,20 @@
     <section class="bg-gray-100" >
         <div id="about-section" class="container-sm px-6 py-20">
 
-            <div class="about grid grid-cols-1 sm:grid-cols-2 gap-10">
+            <div class="relative about grid grid-cols-1 sm:grid-cols-2 gap-10">
+                <div class="absolute top-[40%] -right-[10%]">
+                    <div class="flex flex-col space-y-2">
+                        <div class="rounded-full w-3 h-3 bg-[#092A5E]"></div>
+                        <div class="rounded-full w-3 h-3 bg-gray-300"></div>
+                        <div class="rounded-full w-3 h-3 bg-gray-300"></div>
+                    </div>
+                </div>
                 <div class="flex flex-col justify-start space-y-8">
                     <img src="../imgs/factory.png">
                     <div class="grid grid-cols-3 divide-x divide-gray-800 px-2">
-                        <div class="flex items-center justify-center">
+                        <div class="flex flex-col items-center justify-center">
                             <div class="text-[#092A5E] text-7xl font-bold">01</div>
+                            <div class="bg-gray-100 h-[20px] w-full -mt-4"></div>
                         </div>
                         <div class="flex items-center justify-center">
                             <div class="text-gray-400 text-5xl font-bold">02</div>
@@ -113,15 +155,23 @@
                 </div>
             </div>
 
-            <div class="about grid grid-cols-1 sm:grid-cols-2 gap-10">
+            <div class="relative about grid grid-cols-1 sm:grid-cols-2 gap-10">
+                <div class="absolute top-[40%] -right-[10%]">
+                    <div class="flex flex-col space-y-2">
+                        <div class="rounded-full w-3 h-3 bg-gray-300"></div>
+                        <div class="rounded-full w-3 h-3 bg-[#092A5E]"></div>
+                        <div class="rounded-full w-3 h-3 bg-gray-300"></div>
+                    </div>
+                </div>
                 <div class="flex flex-col justify-start space-y-8">
                     <img src="../imgs/factory.png">
                     <div class="grid grid-cols-3 divide-x divide-gray-800 px-2">
                         <div class="flex items-center justify-center">
                             <div class="text-gray-400 text-5xl font-bold">01</div>
                         </div>
-                        <div class="flex items-center justify-center">
+                        <div class="flex flex-col items-center justify-center">
                             <div class="text-[#092A5E] text-7xl font-bold">02</div>
+                            <div class="bg-gray-100 h-[20px] w-full -mt-3"></div>
                         </div>
                         <div class="flex items-center justify-center">
                             <div class="text-gray-400 text-5xl font-bold">03</div>
@@ -150,7 +200,14 @@
                 </div>
             </div>
 
-            <div class="about grid grid-cols-1 sm:grid-cols-2 gap-10">
+            <div class="relative about grid grid-cols-1 sm:grid-cols-2 gap-10">
+                <div class="absolute top-[40%] -right-[10%]">
+                    <div class="flex flex-col space-y-2">
+                        <div class="rounded-full w-3 h-3 bg-gray-300"></div>
+                        <div class="rounded-full w-3 h-3 bg-gray-300"></div>
+                        <div class="rounded-full w-3 h-3 bg-[#092A5E]"></div>
+                    </div>
+                </div>
                 <div class="flex flex-col justify-start space-y-8">
                     <img src="../imgs/factory.png">
                     <div class="grid grid-cols-3 divide-x divide-gray-800 px-2">
@@ -160,8 +217,9 @@
                         <div class="flex items-center justify-center">
                             <div class="text-gray-400 text-5xl font-bold">02</div>
                         </div>
-                        <div class="flex items-center justify-center">
+                        <div class="flex flex-col items-center justify-center">
                             <div class="text-[#092A5E] text-7xl font-bold">03</div>
+                            <div class="bg-gray-100 h-[20px] w-full -mt-3"></div>
                         </div>
                     </div>
                 </div>
@@ -207,25 +265,28 @@
         </div>
     </section>
 
-    <section class="bg-[#092A5E]">
+    <section id="info" class="bg-[#092A5E]">
         <div class="container-sm px-8 py-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-cap flex flex-col justify-start space-y-12">
-                    <div class="border-b border-1 border-white w-full"></div>
-                    <p data-aos="fade-right" data-aos-once="true" data-aos-delay="400" data-aos-duration="1000"  class="text-gray-400 font-bold text-4xl">8500 МЛН KZT</p>
-                    <div class="grid grid-cols-2">
-                        <p data-aos="fade-right" data-aos-once="true" data-aos-delay="400" data-aos-duration="1000"  class="text-white font-bold text-4xl">18200 ед.</p>
-                        <p data-aos="fade-left" data-aos-once="true" data-aos-delay="500" data-aos-duration="1100" class="text-white font-semibold text-xl">количество поставленного оборудования</p>
-                    </div>
-                    <div class="grid grid-cols-2">
-                        <p data-aos="fade-right" data-aos-once="true" data-aos-delay="600" data-aos-duration="1000"  class="text-white font-bold text-4xl">112 компл.</p>
-                        <p data-aos="fade-left" data-aos-once="true" data-aos-delay="700" data-aos-duration="1100" class="text-white font-semibold text-xl">системы коммерческого учета в резервуарах</p>
-                    </div>
-                    <div class="grid grid-cols-2">
-                        <p data-aos="fade-right" data-aos-once="true" data-aos-delay="800" data-aos-duration="1000"  class="text-white font-bold text-4xl">15000 ед.</p>
-                        <p data-aos="fade-left" data-aos-once="true" data-aos-delay="900" data-aos-duration="1100" class="text-white font-semibold text-xl">приборы КИПиА и АСУ ТП нижнего уровня</p>
+                <div class="bg-cap">
+                    <div class="border-b border-1 border-white w-full mb-8"></div>
+                    <div class="anim flex flex-col justify-start">
+                        <div class="text-gray-400 font-bold text-5xl" id="section2">8500 МЛН KZT</div>
+                        <div class="grid grid-cols-2" id="section3">
+                            <p class="text-white font-bold text-5xl">18200 ед.</p>
+                            <p class="text-white font-semibold text-xl">количество поставленного оборудования</p>
+                        </div>
+                        <div class="grid grid-cols-2" id="section4">
+                            <p class="text-white font-bold text-5xl">112 компл.</p>
+                            <p class="text-white font-semibold text-xl">системы коммерческого учета в резервуарах</p>
+                        </div>
+                        <div class="grid grid-cols-2" id="section5">
+                            <p class="text-white font-bold text-5xl">15000 ед.</p>
+                            <p class="text-white font-semibold text-xl">приборы КИПиА и АСУ ТП нижнего уровня</p>
+                        </div>
                     </div>
                 </div>
+                
                 <img class="hidden md:block" src="../imgs/engineer.png" >
             </div>
         </div>
@@ -253,17 +314,29 @@
                 </div>
                 <div id="carousel-objects" class="max-w-screen-lg mt-8 relative">
                     <div class="carousel-inner">
-                        <div class="carousel-slide-license">
+                        <div class="relative carousel-slide-object">
                             <img src="../imgs/erg.png" alt="Image 1" class="w-full h-full object-cover">
+                            <p class="hidden absolute bottom-2 left-2 text-white font-semibold uppercase text-sm">Eurasian Resources Group</p>
                         </div>
-                        <div class="carousel-slide-license">
+                        <div class="relative carousel-slide-object">
                             <img src="../imgs/kazakhmys.png" alt="Image 2" class="w-full h-full object-cover">
+                            <p class="hidden absolute bottom-2 left-2 text-white font-semibold uppercase text-sm">казахмыс</p>
                         </div>
-                        <div class="carousel-slide-license">
+                        <div class="relative carousel-slide-object">
                             <img src="../imgs/kazatomprom.png" alt="Image 2" class="w-full h-full object-cover">
+                            <p class="hidden absolute bottom-2 left-2 text-white font-semibold uppercase text-sm">казатом</p>
                         </div>
-                        <div style="opacity: 0;" class="carousel-slide-license">
-                            <img src="../imgs/kazatomprom.png" alt="Image 2" class="w-full h-full object-cover">
+                        <div style="opacity: 0;" class="relative carousel-slide-object">
+                            <img src="../imgs/samruk-kazyna.png" alt="Image 2" class="w-full h-full object-cover">
+                            <p class="hidden absolute bottom-2 left-2 text-white font-semibold uppercase text-sm">самрук казына</p>
+                        </div>
+                        <div style="opacity: 0;" class="relative carousel-slide-object">
+                            <img src="../imgs/samruk-energy.png" alt="Image 2" class="w-full h-full object-cover">
+                            <p class="hidden absolute bottom-2 left-2 text-white font-semibold uppercase text-sm">самрук энерджи</p>
+                        </div>
+                        <div style="opacity: 0;" class="relative carousel-slide-object">
+                            <img src="../imgs/kazmunai.png" alt="Image 2" class="w-full h-full object-cover">
+                            <p class="hidden absolute bottom-2 left-2 text-white font-semibold uppercase text-sm">казмунай газ</p>
                         </div>
                     </div>
                 </div>
@@ -272,20 +345,6 @@
                         <button id="prev-btn-obj" class="bg-[#092A5E] px-4 py-3"><img src="../imgs/arrow-i-left-white.svg"></button>
                         <button id="next-btn-obj" class="bg-[#092A5E] px-4 py-3"><img src="../imgs/arrow-long-right-white.svg"></button>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-male-worker">
-        <div class="container-sm pt-36 pb-12">
-            <div class="flex flex-col">
-                <div class="flex items-center justify-center mb-16">
-                    <a class="hover:scale-105" href="https://www.youtube.com/watch?v=DamrVqhpY2s"><img src="../imgs/play.svg" width="60"></a>
-                </div>
-                <div class="flex flex-col justify-start">
-                    <p class="text-white font-semibold text-4xl uppercase mb-2">Посмотрите, как всё работает</p>
-                    <p class="font-light text-white text-lg">Все процессы и функции наших услуг</p>
                 </div>
             </div>
         </div>
@@ -312,20 +371,27 @@
                         <div class="carousel-slide-partner">
                             <img src="../imgs/partners/image 1.png" alt="Image 1">
                         </div>
-                        <div style="opacity: 0;" class="carousel-slide-partner">
-                            <img src="../imgs/partners/image 1.png" alt="Image 1">
-                        </div>
-                        <div style="opacity: 0;" class="carousel-slide-partner">
-                            <img src="../imgs/partners/image 1.png" alt="Image 1">
-                        </div>
                     </div>
-                
                 </div>
             </div>
             <div class="flex justify-end mt-8">
                 <div class="flex items-center space-x-2">
                     <button id="prev-btn-partner" class="bg-[#092A5E] px-4 py-3"><img src="../imgs/arrow-i-left-white.svg"></button>
                     <button id="next-btn-partner" class="bg-[#092A5E] px-4 py-3"><img src="../imgs/arrow-long-right-white.svg"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-male-worker">
+        <div class="container-sm pt-36 pb-12">
+            <div class="flex flex-col">
+                <div class="flex items-center justify-center mb-16">
+                    <a class="hover:scale-105" href="https://www.youtube.com/watch?v=DamrVqhpY2s"><img src="../imgs/play.svg" width="60"></a>
+                </div>
+                <div class="flex flex-col justify-start">
+                    <p class="text-white font-semibold text-4xl uppercase mb-2">Посмотрите, как всё работает</p>
+                    <p class="font-light text-white text-lg">Все процессы и функции наших услуг</p>
                 </div>
             </div>
         </div>
@@ -397,9 +463,9 @@
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         window.addEventListener('load', function() { AOS.init(); });
-    </script>
+    </script> -->
     <script src="./script.js"></script>
     <script src="../script.js"></script>
 </body>

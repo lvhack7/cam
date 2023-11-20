@@ -19,7 +19,39 @@
                     <div class="hidden xl:flex items-center justify-between space-x-4">
                         <a href="../index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Главная</a>
                         <a href="../about/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">О компании</a>
-                        <a href="../catalog/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Каталог</a>
+                        <div class="relative">
+                            <button onclick="toggleDropdown()" class="flex items-center justify-between font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">
+                                Каталог<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                  </svg>
+                            </button>
+                            <div id="dropdown-catalog" class="hidden absolute bg-catalog-dropdown w-64 left-16 p-3 z-10">
+                                <a href="/catalog/index.html" class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 mt-2 hover:cursor-pointer">
+                                    <span>Endress+Hauser</span>
+                                    <img class="hidden" src="../imgs/arrow-long-right-white.svg" >
+                                </a>
+                                <a class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 hover:cursor-pointer">
+                                    <span>Keb</span>
+                                    <img class="hidden" src="../imgs/arrow-long-right-white.svg" >
+                                </a>
+                                <a class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 hover:cursor-pointer">
+                                    <span>Satec</span>
+                                    <img class="hidden" src="../imgs/arrow-long-right-white.svg" >
+                                </a>
+                                <a class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 hover:cursor-pointer">
+                                    <span>Modcon</span>
+                                    <img class="hidden" src="../imgs/arrow-long-right-white.svg" >
+                                </a>
+                                <a class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 hover:cursor-pointer">
+                                    <span>Wika</span>
+                                    <img class="hidden" src="../imgs/arrow-long-right-white.svg" >
+                                </a>
+                                <a class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 hover:cursor-pointer">
+                                    <span>Supcon</span>
+                                    <img class="hidden" src="../imgs/arrow-long-right-white.svg" >
+                                </a>
+                            </div>
+                        </div>
                         <a href="../service/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Услуги</a>
                         <a href="../reference-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Референс</a>
                         <a href="../survey-list/index.html" class="font-light text-gray-700 hover:border-1 hover:cursor-pointer hover:border-b hover:border-gray-700">Опросные</a>

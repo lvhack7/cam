@@ -30,3 +30,48 @@ document.addEventListener("DOMContentLoaded", function() {
 
     updateAbout()
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+        // Create a master timeline
+        var masterTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".bg-cap",
+                start: "top center", // Adjust as needed
+                end: "bottom center",
+                scrub: 1,
+                onLeave: function () {
+                    // When leaving the animation section, remove the pin
+                    ScrollTrigger.unpin(".bg-cap");
+                    // Allow scrolling to other sections
+                    gsap.to(window, { scrollTo: ".next-section", duration: 1 });
+                },
+                onEnter: function () {
+                    // When entering the animation section, pin it
+                    ScrollTrigger.pin("#info");
+                }//pin: true, // Pin the section during the animation
+            }
+        });
+
+        // Add animations to the master timeline
+        var elementsToAnimate = document.querySelectorAll(".anim > div");
+        elementsToAnimate.forEach(function (element, index) {
+            masterTimeline.from(element, {
+                opacity: 0,
+                y: "100",
+                duration: 4,
+                ease: "power2.inOut"
+            });
+
+            if (index < elementsToAnimate.length - 1) {
+                // Add animations for elements to disappear
+                masterTimeline.to(element, {
+                    opacity: 0,
+                    y: "-100",
+                    duration: 5,
+                    ease: "power2.inOut"
+                });
+            }
+        });
+});

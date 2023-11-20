@@ -57,13 +57,35 @@
 
 .carousel-slide-license {
     flex: 0 0 auto;
+    width: calc(100% / 4); /* Set width to 33.33% for three visible slides */
+    opacity: 1; /* Initially, all slides are visible */
+    transition: opacity 0.5s ease-in-out;/* Set width to 33.33% for three visible slides */
+}
+
+.carousel-slide-object {
+    flex: 0 0 auto;
     width: calc(100% / 3); /* Set width to 33.33% for three visible slides */
     opacity: 1; /* Initially, all slides are visible */
     transition: opacity 0.5s ease-in-out;/* Set width to 33.33% for three visible slides */
 }
 
+.bg-catalog-dropdown {
+    background-image: url("./imgs/dropdown-catalog.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dropdown-item:hover img {
+    display: block;
+    width: 30px;
+}
+
 @media (max-width: 768px) {
     .carousel-slide-license {
+        width: 100%;
+    }
+
+    .carousel-slide-object {
         width: 100%;
     }
 }
@@ -72,11 +94,15 @@
     transition: 400ms ease-in-out;
 }
 
-.carousel-slide-license img:hover {
+.carousel-slide-license:hover, .carousel-slide-object:hover img {
     cursor: pointer;
     transform: scale(1.05);
     transition: 200ms ease-in-out;
     filter: brightness(50%);
+}
+
+.carousel-slide-object:hover p {
+    display: block;
 }
 
 .carousel-slide-partner {
