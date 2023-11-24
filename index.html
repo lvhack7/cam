@@ -26,7 +26,7 @@
                                   </svg>
                             </button>
                             <div id="dropdown-catalog" class="hidden absolute bg-catalog-dropdown w-64 left-16 p-3 z-10">
-                                <a class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 mt-2 hover:cursor-pointer">
+                                <a href="/catalog/index.html" class="dropdown-item flex items-center justify-between text-white uppercase hover:underline w-full p-3 mt-2 hover:cursor-pointer">
                                     <span>Endress+Hauser</span>
                                     <img class="hidden" src="./imgs/arrow-long-right-white.svg" >
                                 </a>
@@ -273,7 +273,7 @@
         <div class="container-sm pt-36 pb-12">
             <div class="flex flex-col">
                 <div class="flex items-center justify-center mb-16">
-                    <a class="hover:scale-105" href="https://www.youtube.com/watch?v=DamrVqhpY2s"><img src="../imgs/play.svg" width="60"></a>
+                    <button id="openModalButton" class="hover:scale-105"><img src="../imgs/play.svg" width="60"></button>
                 </div>
                 <div class="flex flex-col justify-start">
                     <p class="text-white font-semibold text-4xl uppercase mb-2">Посмотрите, как всё работает</p>
@@ -382,23 +382,38 @@
         </div>
     </div>
 
-    <div class="fixed bottom-0 right-0 md:bottom-2 md:bottom-2 z-10">
+    <div class="fixed bottom-10 right-10 z-10">
         <div class="flex flex-col items-center justify-between">
-            <img onclick="contact()" class="w-[150px] md:w-[250px] hover:cursor-pointer hover:scale-105" src="./imgs/chat.png" >
-            <div class="hidden flex flex-col items-center -mt-4 mb-4" id="contact-panel">
+            <div style="display: none;" class="flex flex-col items-center -mt-4 mb-4 transition delay-300 ease-in-out" id="contact-panel">
                 <div class="flex flex-col space-y-3 transition ease-in-out delay-150">
-                    <a class="bg-[#A9C7F3] px-4 py-5 rounded-full flex items-center justify-center hover:cursor-pointer hover:scale-110">
-                        <img src="./imgs/phone.svg" width="25" >
+                    <a class="bg-[#A9C7F3] w-16 h-16 rounded-full flex items-center justify-center contact-btn">
+                        <img src="./imgs/phone.svg" width="25">
                     </a>
-                    <a class="bg-[#A9C7F3] p-4 rounded-full flex items-center justify-center hover:cursor-pointer hover:scale-110">
-                        <img src="./imgs/whatsapp-icon.svg" width="30" >
+                    <a class="bg-[#A9C7F3] w-16 h-16 rounded-full flex items-center justify-center contact-btn">
+                        <img src="./imgs/whatsapp-icon.svg" width="30">
                     </a>
-                    <div onclick="contact()" class="bg-[#183C73] px-4 py-3 rounded-full text-white text-4xl flex items-center justify-center hover:cursor-pointer hover:scale-110">
-                        &times;
-                    </div>
                 </div>
             </div>
-            
+            <div style="background: linear-gradient(45.39deg, #092A5E 12.93%, #5C89CF 146.37%);" id="chat-btn" onclick="contact()" class="h-20 w-20 hover:cursor-pointer hover:scale-105 rounded-full flex justify-center items-center animation-pulse">
+                <img src="./imgs/chat-icon.svg" width="30">
+            </div>
+        </div>
+    </div>
+
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <!-- Modal content -->
+        <div class="bg-white p-8 rounded-lg">
+          <!-- Close button -->
+          <button id="closeModalButton" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+    
+          <!-- YouTube Video Embed -->
+          <div class="aspect-w-16 aspect-h-9">
+            <iframe width="700" height="400" src="https://www.youtube-nocookie.com/embed/DamrVqhpY2s?si=qVlwSAEPdjR8eDBW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
         </div>
     </div>
 

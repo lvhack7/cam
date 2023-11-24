@@ -8,6 +8,11 @@
     background-size: cover;
 }
 
+.fixedSection {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
 #steps {
     overflow-y: scroll;
 }
@@ -16,3 +21,17 @@
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
+
+/* 
+.step-block:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #092A5E;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: -7px;
+} */

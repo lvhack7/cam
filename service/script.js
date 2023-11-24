@@ -1,3 +1,21 @@
+const viewportElement = document.getElementById('timeline');
+
+// Listen for scroll events on the viewportElement
+// window.addEventListener('scroll', function () {
+//     // Calculate the percentage of visibility
+//     const elementTop = viewportElement.getBoundingClientRect().top;
+//     const elementHeight = viewportElement.clientHeight;
+//     const windowHeight = window.innerHeight;
+    
+//     // Calculate the percentage of visibility
+//     const percentageVisible = Math.max(0, Math.min((windowHeight - elementTop) / elementHeight, 1)) * 100;
+
+//     if (percentageVisible === 100) {
+//         document.documentElement.style.overflow = 'hidden'
+//     }
+
+//     // You can now use the 'percentageVisible' value for further actions
+// });
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     // Initialize GSAP

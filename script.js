@@ -257,11 +257,17 @@ function toggleMenu() {
 
 function contact() {
     var contact = document.getElementById("contact-panel")
+    var btn = document.getElementById("chat-btn")
+    var icon = btn.querySelector("img")
 
-    if (contact.classList.contains("hidden")) {
-        contact.classList.remove("hidden")
+    if (contact.style.display === 'none') {
+        contact.style.display = 'flex'
+        btn.classList.remove("animation-pulse")
+        icon.src = "./imgs/close-icon.svg"
     } else {
-        contact.classList.add("hidden")
+        contact.style.display = 'none'
+        btn.classList.add("animation-pulse")
+        icon.src = "./imgs/chat-icon.svg"
     }
 }
 
@@ -274,6 +280,20 @@ function toggleDropdown() {
         dropdown.classList.add("hidden")
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const openModalButton = document.getElementById('openModalButton');
+    const videoModal = document.getElementById('videoModal');
+    const closeModalButton = document.getElementById('closeModalButton');
+  
+    openModalButton.addEventListener('click', function () {
+      videoModal.classList.remove('hidden');
+    });
+  
+    closeModalButton.addEventListener('click', function () {
+      videoModal.classList.add('hidden');
+    });
+  });
 
 document.addEventListener("DOMContentLoaded", function() {
     const imgs = document.querySelectorAll("img")

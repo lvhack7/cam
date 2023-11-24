@@ -41,16 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 start: "top center", // Adjust as needed
                 end: "bottom center",
                 scrub: 1,
-                onLeave: function () {
-                    // When leaving the animation section, remove the pin
-                    ScrollTrigger.unpin(".bg-cap");
-                    // Allow scrolling to other sections
-                    gsap.to(window, { scrollTo: ".next-section", duration: 1 });
-                },
-                onEnter: function () {
-                    // When entering the animation section, pin it
-                    ScrollTrigger.pin("#info");
-                }//pin: true, // Pin the section during the animation
+                //pin: true, // Pin the section during the animation
             }
         });
 
