@@ -260,14 +260,23 @@ function contact() {
     var btn = document.getElementById("chat-btn")
     var icon = btn.querySelector("img")
 
+
     if (contact.style.display === 'none') {
         contact.style.display = 'flex'
         btn.classList.remove("animation-pulse")
-        icon.src = "./imgs/close-icon.svg"
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+            icon.src = "./imgs/close-icon.svg"
+        } else {
+            icon.src = "../imgs/close-icon.svg"
+        }
     } else {
         contact.style.display = 'none'
         btn.classList.add("animation-pulse")
-        icon.src = "./imgs/chat-icon.svg"
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+            icon.src = "./imgs/chat-icon.svg"
+        } else {
+            icon.src = "../imgs/chat-icon.svg"
+        }
     }
 }
 

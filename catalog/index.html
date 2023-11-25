@@ -238,7 +238,7 @@
         <div class="container-sm pt-36 pb-12">
             <div class="flex flex-col">
                 <div class="flex items-center justify-center mb-16">
-                    <a class="hover:scale-105" href="https://www.youtube.com/watch?v=DamrVqhpY2s"><img src="../imgs/play.svg" width="60"></a>
+                    <button id="openModalButton"  class="hover:scale-105"><img src="../imgs/play.svg" width="60"></button>
                 </div>
                 <div class="flex flex-col justify-start">
                     <p class="text-white font-semibold text-4xl uppercase mb-2">Посмотрите, как всё работает</p>
@@ -351,6 +351,39 @@
             <div data-href="../reference-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Референс</div>
             <div data-href="../survey-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Опросные</div>
             <div data-href="../contact/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Контакты</div>
+        </div>
+    </div>
+
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden p-6">
+        <!-- Modal content -->
+        <div class="bg-white p-4 rounded-lg w-full h-[40%] md:w-[80%] md:h-[60%]">
+          <!-- Close button -->
+          <button id="closeModalButton" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+    
+          <!-- YouTube Video Embed -->
+        <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/DamrVqhpY2s?si=qVlwSAEPdjR8eDBW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+    </div>
+
+    <div class="fixed bottom-10 right-10 z-10">
+        <div class="flex flex-col items-center justify-between">
+            <div style="display: none;" class="flex flex-col items-center -mt-4 mb-4 transition delay-300 ease-in-out" id="contact-panel">
+                <div class="flex flex-col space-y-3 transition ease-in-out delay-150">
+                    <a class="bg-[#A9C7F3] w-16 h-16 rounded-full flex items-center justify-center contact-btn">
+                        <img src="../imgs/phone.svg" width="25">
+                    </a>
+                    <a class="bg-[#A9C7F3] w-16 h-16 rounded-full flex items-center justify-center contact-btn">
+                        <img src="../imgs/whatsapp-icon.svg" width="30">
+                    </a>
+                </div>
+            </div>
+            <div style="background: linear-gradient(45.39deg, #092A5E 12.93%, #5C89CF 146.37%);" id="chat-btn" onclick="contact()" class="h-20 w-20 hover:cursor-pointer hover:scale-105 rounded-full flex justify-center items-center animation-pulse">
+                <img src="../imgs/chat-icon.svg" width="30">
+            </div>
         </div>
     </div>
 

@@ -23,6 +23,10 @@ const list = [
     "Tubeskin sensor application"
 ]
 
+function catalogRedirect() {
+    window.location.href = "../catalog/index.html"
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const wika = document.getElementById("wika")
 

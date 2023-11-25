@@ -49,28 +49,6 @@
     content: url('./imgs/arrows-white.png');
 }
 
-.animation-pulse {
-    /*box-shadow: 0 0 0 20px rgba(229,62,62, 0.5);
-    transform: scale(0.8);*/
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(0.8);
-        box-shadow: 0 0 0 0 #092A5E
-    }
-
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 40px rgba(5, 81, 244, 0)
-    }
-
-    100% {
-        transform: scale(0.8);
-    }
-}
-
 .carousel-inner {
     display: flex;
     align-items: center;

@@ -154,10 +154,16 @@
 
     <section class="bg-[#092A5E]">
         <div class="container-sm py-16">
-            <p class="font-medium text-white uppercase text-4xl mb-12">Получить больше информации о приборах и оборудовании Endress+Hauser можно здесь</p>
-            <button class="flex items-center space-x-8 bg-white rounded-lg px-6 py-3">
-                <span>Перейти</span> <img src="../imgs/arrow-right-black.svg" >
-            </button>
+            <div class="flex flex-col">
+                <p class="font-medium text-white uppercase text-4xl mb-12">Получить больше информации о приборах и оборудовании Endress+Hauser можно здесь</p>
+                <div class="justify-start">
+                    <button 
+                    onclick="catalogRedirect()"
+                    class="flex items-center space-x-6 bg-white rounded-lg px-6 py-3">
+                        <span>Перейти</span> <img src="../imgs/arrow-right-black.svg" >
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -229,6 +235,24 @@
             <div data-href="../reference-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Референс</div>
             <div data-href="../survey-list/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Опросные</div>
             <div data-href="../contact/index.html" class="mobile-link font-light text-gray-700 hover:border-1 hover:cursor-pointer">Контакты</div>
+        </div>
+    </div>
+
+    <div class="fixed bottom-10 right-10 z-10">
+        <div class="flex flex-col items-center justify-between">
+            <div style="display: none;" class="flex flex-col items-center -mt-4 mb-4 transition delay-300 ease-in-out" id="contact-panel">
+                <div class="flex flex-col space-y-3 transition ease-in-out delay-150">
+                    <a class="bg-[#A9C7F3] w-16 h-16 rounded-full flex items-center justify-center contact-btn">
+                        <img src="../imgs/phone.svg" width="25">
+                    </a>
+                    <a class="bg-[#A9C7F3] w-16 h-16 rounded-full flex items-center justify-center contact-btn">
+                        <img src="../imgs/whatsapp-icon.svg" width="30">
+                    </a>
+                </div>
+            </div>
+            <div style="background: linear-gradient(45.39deg, #092A5E 12.93%, #5C89CF 146.37%);" id="chat-btn" onclick="contact()" class="h-20 w-20 hover:cursor-pointer hover:scale-105 rounded-full flex justify-center items-center animation-pulse">
+                <img src="../imgs/chat-icon.svg" width="30">
+            </div>
         </div>
     </div>
 
