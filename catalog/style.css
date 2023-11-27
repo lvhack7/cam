@@ -4,6 +4,16 @@
     background-size: cover;
 }
 
+.catalog-item:nth-child(1) {
+    grid-row: span 2 / span 2;
+}
+
+@media screen and (max-width: 1200px) {
+    .catalog-item:nth-child(1) {
+        grid-row: span 1 / span 1;
+    }
+}
+
 .catalog-item:hover {
     background-color: #3B81EC;
     transition: 200ms ease-in-out;
