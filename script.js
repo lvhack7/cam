@@ -304,11 +304,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const imgs = document.querySelectorAll("img")
+// document.addEventListener("DOMContentLoaded", function() {
+//     const imgs = document.querySelectorAll("img")
 
-    imgs.forEach((img, index) => {
-        img.loading = "lazy"
-    })
-})
+//     imgs.forEach((img, index) => {
+//         img.loading = "lazy"
+//     })
+// })
 
